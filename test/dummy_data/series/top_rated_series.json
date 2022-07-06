@@ -1,0 +1,28 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "poster_path": "/sskPK2HjkFaxam10eg0Hk1A3I2m.jpg",
+      "popularity": 6.055152,
+      "id": 60622,
+      "backdrop_path": "/qq1S5EjaaUrQAcMsn6raNFXpzHk.jpg",
+      "vote_average": 7.72,
+      "overview": "A close-knit anthology series dealing with stories involving malice, violence and murder based in and around Minnesota.",
+      "first_air_date": "2014-04-15",
+      "origin_country": [
+        "US"
+      ],
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "original_language": "en",
+      "vote_count": 118,
+      "name": "Fargo",
+      "original_name": "Fargo"
+    }
+  ],
+  "total_results": 747,
+  "total_pages": 38
+}

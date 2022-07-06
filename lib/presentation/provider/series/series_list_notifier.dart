@@ -7,25 +7,20 @@ import 'package:flutter/material.dart';
 
 class SeriesListNotifier extends ChangeNotifier {
   var _nowPlayingSeries = <Series>[];
+  var _popularSeries = <Series>[];
+  var _topRatedSeries = <Series>[];
   List<Series> get nowPlayingSeries => _nowPlayingSeries;
+  String _message = '';
+  String get message => _message;
 
   RequestState _nowPlayingSeriesState = RequestState.Empty;
   RequestState get nowPlayingSeriesState => _nowPlayingSeriesState;
-
-  var _popularSeries = <Series>[];
   List<Series> get popularSeries => _popularSeries;
-
   RequestState _popularSeriesState = RequestState.Empty;
   RequestState get popularSeriesState => _popularSeriesState;
-
-  var _topRatedSeries = <Series>[];
   List<Series> get topRatedSeries => _topRatedSeries;
-
   RequestState _topRatedSeriesState = RequestState.Empty;
   RequestState get topRatedSeriesState => _topRatedSeriesState;
-
-  String _message = '';
-  String get message => _message;
 
   SeriesListNotifier({
     required this.getNowPlayingSeries,

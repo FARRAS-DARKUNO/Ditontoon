@@ -44,6 +44,9 @@ class SeriesDetailNotifier extends ChangeNotifier {
   bool _isAddedToWatchlistSeries = false;
   bool get isAddedToSeriesWatchlist => _isAddedToWatchlistSeries;
 
+  String _seriesWatchlistMessage = '';
+  String get seriesWatchlistMessage => _seriesWatchlistMessage;
+
   Future<void> fetchSeriesDetail(int id) async {
     _seriesState = RequestState.Loading;
     notifyListeners();
@@ -75,26 +78,8 @@ class SeriesDetailNotifier extends ChangeNotifier {
     );
   }
 
-  String _seriesWatchlistMessage = '';
-  String get seriesWatchlistMessage => _seriesWatchlistMessage;
-
   Future<void> addWatchlistSeries(SeriesDetail series) async {
     final result = await saveWatchlistSeries.execute(series);
-
-    await result.fold(
-      (failure) async {
-        _seriesWatchlistMessage = failure.message;
-      },
-      (successMessage) async {
-        _seriesWatchlistMessage = successMessage;
-      },
-    );
-
-    await loadWatchlistSeriesStatus(series.id);
-  }
-
-  Future<void> removeFromWatchlistSeries(SeriesDetail series) async {
-    final result = await removeWatchlistSeries.execute(series);
 
     await result.fold(
       (failure) async {
@@ -112,5 +97,20 @@ class SeriesDetailNotifier extends ChangeNotifier {
     final result = await getWatchlistSeriesStatus.execute(id);
     _isAddedToWatchlistSeries = result;
     notifyListeners();
+  }
+
+  Future<void> removeFromWatchlistSeries(SeriesDetail series) async {
+    final result = await removeWatchlistSeries.execute(series);
+
+    await result.fold(
+      (failure) async {
+        _seriesWatchlistMessage = failure.message;
+      },
+      (successMessage) async {
+        _seriesWatchlistMessage = successMessage;
+      },
+    );
+
+    await loadWatchlistSeriesStatus(series.id);
   }
 }
