@@ -17,6 +17,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ditonton/injection.dart' as di;
+import 'package:ditonton/presentation/pages/series/home_series_page.dart';
+import 'package:ditonton/presentation/pages/series/popular_series_page.dart';
+import 'package:ditonton/presentation/pages/series/series_detail_page.dart';
+import 'package:ditonton/presentation/pages/series/series_search_page.dart';
+import 'package:ditonton/presentation/pages/series/top_rated_series_page.dart';
+import 'package:ditonton/presentation/pages/series/watchlist_series_page.dart';
+import 'package:ditonton/presentation/provider/series/popular_series_notifier.dart';
+import 'package:ditonton/presentation/provider/series/series_detail_notifier.dart';
+import 'package:ditonton/presentation/provider/series/series_list_notifier.dart';
+import 'package:ditonton/presentation/provider/series/series_search_notifier.dart';
+import 'package:ditonton/presentation/provider/series/top_rated_series_notifier.dart';
+import 'package:ditonton/presentation/provider/series/watchlist_series_notifier.dart';
 
 void main() {
   di.init();
@@ -45,6 +57,24 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<WatchlistMovieNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<SeriesListNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<SeriesDetailNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<PopularSeriesNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<TopRatedSeriesNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<SeriesSearchNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<WatchlistSeriesNotifier>(),
         ),
       ],
       child: MaterialApp(
@@ -77,6 +107,22 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) => WatchlistMoviesPage());
             case AboutPage.ROUTE_NAME:
               return MaterialPageRoute(builder: (_) => AboutPage());
+            case '/series':
+              return MaterialPageRoute(builder: (_) => HomeSeriesPage());
+            case PopularSeriesPage.ROUTE_NAME:
+              return CupertinoPageRoute(builder: (_) => PopularSeriesPage());
+            case TopRatedSeriesPage.ROUTE_NAME:
+              return CupertinoPageRoute(builder: (_) => TopRatedSeriesPage());
+            case SeriesDetailPage.ROUTE_NAME:
+              final id = settings.arguments as int;
+              return MaterialPageRoute(
+                builder: (_) => SeriesDetailPage(id: id),
+                settings: settings,
+              );
+            case SeriesSearchPage.ROUTE_NAME:
+              return CupertinoPageRoute(builder: (_) => SeriesSearchPage());
+            case WatchlistSeriesPage.ROUTE_NAME:
+              return CupertinoPageRoute(builder: (_) => WatchlistSeriesPage());
             default:
               return MaterialPageRoute(builder: (_) {
                 return Scaffold(
