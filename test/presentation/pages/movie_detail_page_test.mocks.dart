@@ -6,14 +6,20 @@ import 'dart:async' as _i11;
 import 'dart:ui' as _i12;
 
 import 'package:ditonton/common/state_enum.dart' as _i9;
-import 'package:ditonton/domain/entities/movie.dart' as _i10;
-import 'package:ditonton/domain/entities/movie_detail.dart' as _i7;
-import 'package:ditonton/domain/usecases/get_movie_detail.dart' as _i2;
-import 'package:ditonton/domain/usecases/get_movie_recommendations.dart' as _i3;
-import 'package:ditonton/domain/usecases/get_watchlist_status.dart' as _i4;
-import 'package:ditonton/domain/usecases/remove_watchlist.dart' as _i6;
-import 'package:ditonton/domain/usecases/save_watchlist.dart' as _i5;
-import 'package:ditonton/presentation/provider/movie_detail_notifier.dart'
+import 'package:ditonton/domain/entities/movies-entities/movie.dart' as _i10;
+import 'package:ditonton/domain/entities/movies-entities/movie_detail.dart'
+    as _i7;
+import 'package:ditonton/domain/usecases/movies-usecases/get_movie_detail.dart'
+    as _i2;
+import 'package:ditonton/domain/usecases/movies-usecases/get_movie_recommendations.dart'
+    as _i3;
+import 'package:ditonton/domain/usecases/movies-usecases/get_watchlist_status.dart'
+    as _i4;
+import 'package:ditonton/domain/usecases/movies-usecases/remove_watchlist.dart'
+    as _i6;
+import 'package:ditonton/domain/usecases/movies-usecases/save_watchlist.dart'
+    as _i5;
+import 'package:ditonton/presentation/provider/moovies-provider/movie_detail_notifier.dart'
     as _i8;
 import 'package:mockito/mockito.dart' as _i1;
 
