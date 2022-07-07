@@ -32,28 +32,6 @@ class NowPlayingMovieHasData extends MovieState {
   List<Object> get props => [resultNowPlayingMovie];
 }
 
-class PopularMovieEmpty extends MovieState {}
-
-class PopularMovieLoading extends MovieState {}
-
-class PopularMovieError extends MovieState {
-  final String message;
-
-  const PopularMovieError(this.message);
-
-  @override
-  List<Object> get props => [message];
-}
-
-class PopularMovieHasData extends MovieState {
-  final List<Movie> resultPopularMovie;
-
-  const PopularMovieHasData(this.resultPopularMovie);
-
-  @override
-  List<Object> get props => [resultPopularMovie];
-}
-
 class TopRatedMovieEmpty extends MovieState {}
 
 class TopRatedMovieLoading extends MovieState {}
@@ -87,6 +65,28 @@ class MovieDetailError extends MovieState {
 
   @override
   List<Object> get props => [message];
+}
+
+class PopularMovieEmpty extends MovieState {}
+
+class PopularMovieLoading extends MovieState {}
+
+class PopularMovieError extends MovieState {
+  final String message;
+
+  const PopularMovieError(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+class PopularMovieHasData extends MovieState {
+  final List<Movie> resultPopularMovie;
+
+  const PopularMovieHasData(this.resultPopularMovie);
+
+  @override
+  List<Object> get props => [resultPopularMovie];
 }
 
 class MovieDetailHasData extends MovieState {
@@ -127,19 +127,6 @@ abstract class MovieWatchlistState extends Equatable {
   List<Object?> get props => [];
 }
 
-class MovieWatchlistEmpty extends MovieWatchlistState {}
-
-class MovieWatchlistLoading extends MovieWatchlistState {}
-
-class MovieWatchlistError extends MovieWatchlistState {
-  final String message;
-
-  const MovieWatchlistError(this.message);
-
-  @override
-  List<Object?> get props => [message];
-}
-
 class MovieWatchlistHasStatus extends MovieWatchlistState {
   final bool result;
 
@@ -165,4 +152,17 @@ class MovieWatchlistHasData extends MovieWatchlistState {
 
   @override
   List<Object?> get props => [movie];
+}
+
+class MovieWatchlistEmpty extends MovieWatchlistState {}
+
+class MovieWatchlistLoading extends MovieWatchlistState {}
+
+class MovieWatchlistError extends MovieWatchlistState {
+  final String message;
+
+  const MovieWatchlistError(this.message);
+
+  @override
+  List<Object?> get props => [message];
 }

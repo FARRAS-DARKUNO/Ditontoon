@@ -36,20 +36,6 @@ class MovieRecommendation extends MovieEvent {
   List<Object> get props => [id];
 }
 
-class MovieWatchlist extends MovieEvent {
-  @override
-  List<Object> get props => [];
-}
-
-class WatchlistStatus extends MovieEvent {
-  final int id;
-
-  const WatchlistStatus(this.id);
-
-  @override
-  List<Object> get props => [id];
-}
-
 class AddWatchlist extends MovieEvent {
   final MovieDetail movieDetail;
 
@@ -66,4 +52,18 @@ class RemoveFromWatchlist extends MovieEvent {
 
   @override
   List<Object> get props => [movieDetail];
+}
+
+class MovieWatchlist extends MovieEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class WatchlistStatus extends MovieEvent {
+  final int id;
+
+  const WatchlistStatus(this.id);
+
+  @override
+  List<Object> get props => [id];
 }
