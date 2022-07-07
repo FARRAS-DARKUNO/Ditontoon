@@ -173,7 +173,7 @@ void main() {
 
   group('search series', () {
     final tvsResult = SeriesResponse.fromJson(json.decode(
-            readJson('dummy_data/series/search_gameofthrones_series.json')))
+            readJson('dummy_data/series/search_dragonkingdom_series.json')))
         .seriesList;
     final tQuery = 'Game of Thrones';
 
@@ -182,7 +182,7 @@ void main() {
       when(mockHttpClient
               .get(Uri.parse('$BASE_URL/search/tv?$API_KEY&query=$tQuery')))
           .thenAnswer((_) async => http.Response(
-              readJson('dummy_data/series/search_gameofthrones_series.json'),
+              readJson('dummy_data/series/search_dragonkingdom_series.json'),
               200));
       // act
       final result = await dataSource.searchSeries(tQuery);

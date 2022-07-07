@@ -33,7 +33,7 @@ class SeriesDetailResponse extends Equatable {
 
   factory SeriesDetailResponse.fromJson(Map<String, dynamic> json) =>
       SeriesDetailResponse(
-        backdropPath: json["backdrop_path"],
+        backdropPath: json["backdrop_path"] ?? 'none',
         genres: List<GenreModel>.from(
             json["genres"].map((x) => GenreModel.fromJson(x))),
         id: json["id"],
