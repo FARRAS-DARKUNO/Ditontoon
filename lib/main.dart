@@ -7,6 +7,7 @@ import 'package:ditonton/presentation/pages/movie_page/popular_movies_page.dart'
 import 'package:ditonton/presentation/pages/movie_page/search_page.dart';
 import 'package:ditonton/presentation/pages/movie_page/top_rated_movies_page.dart';
 import 'package:ditonton/presentation/pages/movie_page/watchlist_movies_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,7 +23,9 @@ import 'package:ditonton/presentation/bloc/movies/movie_bloc.dart';
 import 'package:ditonton/presentation/bloc/convert_search/convert_search_bloc.dart';
 import 'package:ditonton/presentation/bloc/series/series_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   di.init();
   runApp(MyApp());
 }
