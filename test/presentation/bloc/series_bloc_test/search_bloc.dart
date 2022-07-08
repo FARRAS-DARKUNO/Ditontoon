@@ -1,6 +1,6 @@
-import 'package:ditonton/domain/entities/movies/movie.dart';
+import 'package:ditonton/domain/entities/movies-entities/movie.dart';
 import 'package:ditonton/domain/entities/series/series.dart';
-import 'package:ditonton/domain/usecases/movies/search_movies.dart';
+import 'package:ditonton/domain/usecases/movies-usecases/search_movies.dart';
 import 'package:ditonton/domain/usecases/series/search_series.dart';
 import 'package:equatable/equatable.dart';
 import 'package:rxdart/rxdart.dart';

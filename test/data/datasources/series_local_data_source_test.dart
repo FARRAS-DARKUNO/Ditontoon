@@ -3,8 +3,8 @@ import 'package:ditonton/data/datasources/series/series_local_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../../dummy_data/series/series_dummy_objects.dart';
-import '../../../helpers/test_helper.mocks.dart';
+import '../../dummy_data/series/series_dummy_objects.dart';
+import '../../helpers/test_helper.mocks.dart';
 
 void main() {
   late SeriesLocalDataSourceImpl dataSource;
