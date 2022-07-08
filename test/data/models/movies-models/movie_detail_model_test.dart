@@ -1,4 +1,4 @@
-import 'package:ditonton/data/models/movies/movie_detail_model.dart';
+import 'package:ditonton/data/models/movies-model/movie_detail_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

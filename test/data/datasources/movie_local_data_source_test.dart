@@ -1,9 +1,9 @@
 import 'package:ditonton/common/exception.dart';
-import 'package:ditonton/data/datasources/movies/movie_local_data_source.dart';
+import 'package:ditonton/data/datasources/movies-data/movie_local_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../dummy_data/movies/dummy_objects.dart';
+import '../../dummy_data/movies-dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
 void main() {
