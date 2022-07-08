@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2022-07-07 13:18:22</td>
+            <td class="headerValue">2022-07-08 21:35:18</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -66,12 +66,12 @@
 <a name="4"><span class="lineNum">       4 </span>            : class SeriesResponse extends Equatable {</a>
 <a name="5"><span class="lineNum">       5 </span>            :   final List&lt;SeriesModel&gt; seriesList;</a>
 <a name="6"><span class="lineNum">       6 </span>            : </a>
-<a name="7"><span class="lineNum">       7 </span><span class="lineCov">          2 :   SeriesResponse({required this.seriesList});</span></a>
+<a name="7"><span class="lineNum">       7 </span><span class="lineCov">          1 :   SeriesResponse({required this.seriesList});</span></a>
 <a name="8"><span class="lineNum">       8 </span>            : </a>
-<a name="9"><span class="lineNum">       9 </span><span class="lineCov">          4 :   factory SeriesResponse.fromJson(Map&lt;String, dynamic&gt; json) =&gt; SeriesResponse(</span></a>
-<a name="10"><span class="lineNum">      10 </span><span class="lineCov">          4 :         seriesList: List&lt;SeriesModel&gt;.from((json[&quot;results&quot;] as List)</span></a>
-<a name="11"><span class="lineNum">      11 </span><span class="lineCov">          6 :             .map((x) =&gt; SeriesModel.fromJson(x))</span></a>
-<a name="12"><span class="lineNum">      12 </span><span class="lineCov">          6 :             .where((element) =&gt; element.posterPath != null)),</span></a>
+<a name="9"><span class="lineNum">       9 </span><span class="lineCov">          2 :   factory SeriesResponse.fromJson(Map&lt;String, dynamic&gt; json) =&gt; SeriesResponse(</span></a>
+<a name="10"><span class="lineNum">      10 </span><span class="lineCov">          2 :         seriesList: List&lt;SeriesModel&gt;.from((json[&quot;results&quot;] as List)</span></a>
+<a name="11"><span class="lineNum">      11 </span><span class="lineCov">          3 :             .map((x) =&gt; SeriesModel.fromJson(x))</span></a>
+<a name="12"><span class="lineNum">      12 </span><span class="lineCov">          3 :             .where((element) =&gt; element.posterPath != null)),</span></a>
 <a name="13"><span class="lineNum">      13 </span>            :       );</a>
 <a name="14"><span class="lineNum">      14 </span>            : </a>
 <a name="15"><span class="lineNum">      15 </span><span class="lineCov">          2 :   Map&lt;String, dynamic&gt; toJson() =&gt; {</span></a>

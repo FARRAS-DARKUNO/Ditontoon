@@ -1,5 +1,5 @@
 import 'package:ditonton/domain/entities/series/series.dart';
-import 'package:ditonton/presentation/bloc/convert_search_bloc.dart';
+import 'package:ditonton/presentation/bloc/convert_search/convert_search_bloc.dart';
 import 'package:ditonton/presentation/pages/series/series_search_page.dart';
 import 'package:ditonton/presentation/widgets/series_card_list.dart';
 import 'package:flutter/material.dart';

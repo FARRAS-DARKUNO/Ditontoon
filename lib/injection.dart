@@ -28,7 +28,7 @@ import 'package:ditonton/domain/usecases/series/get_watchlist_series_status.dart
 import 'package:ditonton/domain/usecases/series/remove_watchlist_series.dart';
 import 'package:ditonton/domain/usecases/series/save_watchlist_series.dart';
 import 'package:ditonton/domain/usecases/series/search_series.dart';
-import 'package:ditonton/presentation/bloc/convert_search_bloc.dart';
+import 'package:ditonton/presentation/bloc/convert_search/convert_search_bloc.dart';
 import 'package:ditonton/presentation/bloc/movies/movie_bloc.dart';
 import 'package:ditonton/presentation/bloc/series/series_bloc.dart';
 import 'package:http/http.dart' as http;

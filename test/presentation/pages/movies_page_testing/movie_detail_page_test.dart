@@ -1,3 +1,4 @@
+import 'package:bloc_test/bloc_test.dart';
 import 'package:ditonton/presentation/bloc/movies/movie_bloc.dart';
 import 'package:ditonton/presentation/pages/movie_page/movie_detail_page.dart';
 import 'package:flutter/material.dart';

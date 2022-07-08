@@ -1,6 +1,6 @@
 import 'package:ditonton/common/constants.dart';
 import 'package:ditonton/common/utils.dart';
-import 'package:ditonton/presentation/pages/about_page.dart';
+import 'package:ditonton/presentation/pages/about_page/about_page.dart';
 import 'package:ditonton/presentation/pages/movie_page/movie_detail_page.dart';
 import 'package:ditonton/presentation/pages/movie_page/home_movie_page.dart';
 import 'package:ditonton/presentation/pages/movie_page/popular_movies_page.dart';
@@ -19,7 +19,7 @@ import 'package:ditonton/presentation/pages/series/series_search_page.dart';
 import 'package:ditonton/presentation/pages/series/top_rated_series_page.dart';
 import 'package:ditonton/presentation/pages/series/watchlist_series_page.dart';
 import 'package:ditonton/presentation/bloc/movies/movie_bloc.dart';
-import 'package:ditonton/presentation/bloc/convert_search_bloc.dart';
+import 'package:ditonton/presentation/bloc/convert_search/convert_search_bloc.dart';
 import 'package:ditonton/presentation/bloc/series/series_bloc.dart';
 
 void main() {

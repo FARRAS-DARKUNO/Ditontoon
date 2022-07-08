@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ditonton/common/constants.dart';
 import 'package:ditonton/domain/entities/series/series.dart';
 import 'package:ditonton/presentation/bloc/series/series_bloc.dart';
-import 'package:ditonton/presentation/pages/about_page.dart';
+import 'package:ditonton/presentation/pages/about_page/about_page.dart';
 import 'package:ditonton/presentation/pages/series/popular_series_page.dart';
 import 'package:ditonton/presentation/pages/series/series_detail_page.dart';
 import 'package:ditonton/presentation/pages/series/series_search_page.dart';
