@@ -128,7 +128,7 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) {
                 return Scaffold(
                   body: Center(
-                    child: Text('dont have a page'),
+                    child: Text('Page not found :('),
                   ),
                 );
               });
